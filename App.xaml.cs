@@ -13,7 +13,7 @@ namespace ColorSelectorApp
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new RgbPage();
         }
 
         protected override void OnStart()
