@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ColorSelectorApp.Views.RgbPage"
+             Title="Rgb">
+    <Grid Padding="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <StackLayout Grid.Row="0">
+            <Label Text="(R) Red"
+                   HorizontalOptions="Start"/>
+            <Slider x:Name="SliderR"
+                    Minimum="0"
+                    Maximum="255"
+                    ValueChanged="SliderR_ValueChanged"/>
+            <Label Text="(G) Green"/>
+            <Slider x:Name="SliderG"
+                    Minimum="0"
+                    Maximum="255"
+                    ValueChanged="SliderG_ValueChanged"/>
+            <Label Text="(B) Blue"/>
+            <Slider x:Name="SliderB"
+                    Minimum="0"
+                    Maximum="255"
+                    ValueChanged="SliderB_ValueChanged"/>
+            <Label Text="Color Previewer"
+                   TextColor="White"
+                   x:Name="TxtColorPreviewer"
+                   BackgroundColor="#3BAFDA"
+                   FontSize="Large"
+                   HorizontalTextAlignment="Center"/>
+        </StackLayout>
+        <StackLayout Grid.Row="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>    
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="(R)"
+                       Grid.Column="0"
+                       Grid.Row="0"
+                       HorizontalOptions="Start"
+                       FontSize="Medium"/>
+                <Label Text="0"
+                       Grid.Column="1"
+                       Grid.Row="0"
+                       HorizontalOptions="End"
+                       x:Name="RValue"
+                       FontSize="Medium"/>
+
+                <Label Text="(G)"
+                       Grid.Column="0"
+                       Grid.Row="1"
+                       HorizontalOptions="Start"
+                       FontSize="Medium"/>
+                <Label Text="0"
+                       Grid.Column="1"
+                       Grid.Row="1"
+                       HorizontalOptions="End"
+                       x:Name="GValue"
+                       FontSize="Medium"/>
+
+                <Label Text="(B)"
+                       Grid.Column="0"
+                       Grid.Row="2"
+                       HorizontalOptions="Start"
+                       FontSize="Medium"/>
+                <Label Text="0"
+                       Grid.Column="1"
+                       Grid.Row="2"
+                       HorizontalOptions="End"
+                       x:Name="BValue"
+                       FontSize="Medium"/>
+            </Grid>
+        </StackLayout>
+    </Grid>
+</ContentPage>
